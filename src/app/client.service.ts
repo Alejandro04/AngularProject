@@ -18,7 +18,7 @@ export class ClientService {
     return this.http.get(`${this.baseUrl}/clients`);
   }
   getClient(id: number): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+    return this.http.get(`${this.baseUrl}/clients/${id}`);
   }
 
   /*

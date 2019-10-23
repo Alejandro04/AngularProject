@@ -1,1 +1,15 @@
-<p>client-details works!</p>
+<h2>Detalle del cliente</h2> 
+
+<hr/>
+<div *ngIf="client">
+  <div>
+    <label><b>Nombre: </b></label> {{client.name}}
+  </div>
+  <div>
+    <label><b>Descripción: </b></label> {{client.description}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Volver</button><br>

@@ -29,7 +29,7 @@ export class ClientListComponent implements OnInit {
   }
 
   clientDetails(id: number){
-    this.router.navigate(['details', id]);
+    this.router.navigate(['clients', id]);
   }
 
   deleteClient(id: number) {
