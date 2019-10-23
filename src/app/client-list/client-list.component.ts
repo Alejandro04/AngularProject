@@ -25,6 +25,7 @@ export class ClientListComponent implements OnInit {
 
   reloadData() {
     this.clients = this.clientService.getClients()
+    console.log(this.clients)
   }
 
   clientDetails(id: number){

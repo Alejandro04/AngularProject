@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ClientService {
 
-  private baseUrl = '';
+  private baseUrl = 'http://localhost:3000';
 
   constructor(
     private http: HttpClient
@@ -15,7 +15,7 @@ export class ClientService {
 
 
   getClients(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+    return this.http.get(`${this.baseUrl}/clients`);
   }
   getClient(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);

@@ -6,17 +6,17 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
+            <th>ID</th>
+            <th>name</th>
+            <th>Description</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let client of clients | async">
-            <td>{{client.firstName}}</td>
-            <td>{{client.lastName}}</td>
-            <td>{{client.emailId}}</td>
+            <td>{{client._id}}</td>
+            <td>{{client.name}}</td>
+            <td>{{client.description}}</td>
             <td>
                 <button (click)="deleteClient(client.id)" class="btn btn-danger">Delete</button>
                 <button (click)="clientDetails(client.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
