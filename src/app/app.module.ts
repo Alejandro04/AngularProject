@@ -7,13 +7,15 @@ import { CreateClientComponent } from './create-client/create-client.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { ClientListComponent } from './client-list/client-list.component';
 import { FormsModule } from '@angular/forms';
+import { UpdateClientComponent } from './update-client/update-client.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreateClientComponent,
     ClientDetailsComponent,
-    ClientListComponent
+    ClientListComponent,
+    UpdateClientComponent
   ],
   imports: [
     BrowserModule,

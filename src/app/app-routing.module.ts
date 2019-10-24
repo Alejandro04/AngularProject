@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ClientListComponent } from './client-list/client-list.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { CreateClientComponent } from './create-client/create-client.component';
+import { UpdateClientComponent } from './update-client/update-client.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'clients/add',
     component: CreateClientComponent
+  },
+  {
+    path: 'clients/edit/:id',
+    component: UpdateClientComponent
   },
   {
     path: 'clients/:id',

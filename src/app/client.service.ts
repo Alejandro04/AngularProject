@@ -25,11 +25,9 @@ export class ClientService {
     return this.http.post(`${this.baseUrl}/clients`, client);
   }
 
-  /*
   updateClient(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.baseUrl}/${id}`, value);
+    return this.http.put(`${this.baseUrl}/clients/${id}`, value);
   }
-  */
 
   deleteClient(id: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, { responseType: 'text' });
