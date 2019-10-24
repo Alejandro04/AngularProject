@@ -21,11 +21,11 @@ export class ClientService {
     return this.http.get(`${this.baseUrl}/clients/${id}`);
   }
 
-  /*
   createClient(client: Object): Observable<Object> {
-    return this.http.post(`${this.baseUrl}`, client);
+    return this.http.post(`${this.baseUrl}/clients`, client);
   }
 
+  /*
   updateClient(id: number, value: any): Observable<Object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
