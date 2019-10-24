@@ -29,6 +29,7 @@ export class ClientListComponent implements OnInit {
   }
 
   deleteClient(id: number) {
+    console.log(id)
     this.clientService.deleteClient(id)
       .subscribe(
         data => {

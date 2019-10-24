@@ -19,7 +19,7 @@
             <td>{{client.name}}</td>
             <td>{{client.description}}</td>
             <td>
-                <button (click)="deleteClient(client.id)" class="btn btn-danger">Delete</button>
+                <button (click)="deleteClient(client._id)" class="btn btn-danger">Delete</button>
                 <a [routerLink]="['/clients/', (client._id)]">Detalle</a>
                 <a [routerLink]="['/clients/edit/', (client._id)]">Actualizar</a>
             </td>
