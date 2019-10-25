@@ -11,6 +11,7 @@ import { UpdateClientComponent } from './update-client/update-client.component';
 
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './counter.reducer';
+import { simpleReducer } from './simple.reducer';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { counterReducer } from './counter.reducer';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    StoreModule.forRoot({ count: counterReducer })
+    StoreModule.forRoot({ 
+      message: simpleReducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

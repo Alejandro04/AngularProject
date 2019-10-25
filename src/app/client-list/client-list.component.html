@@ -12,6 +12,14 @@
       <button id="reset" (click)="reset()">Reset Counter</button>
     </div>
 
+    <div>
+      <p>Ngrx idiomas</p>
+      {{ message$ | async}}
+
+      <button (click)="spanishMessage()">Español</button>
+      <button (click)="frenchMessage()">Francés</button>
+    </div>
+
     <h2>Clients</h2>
     <a [routerLink]="['/clients/add/']">Nuevo</a>
   </div>

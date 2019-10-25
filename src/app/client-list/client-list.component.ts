@@ -7,6 +7,10 @@ import { increment, decrement, reset } from '../counter.actions';
 import { ClientService } from '../client.service';
 import { ClientInterface } from '../interfaces/client';
 
+interface AppState {
+  message: string;
+}
+
 @Component({
   selector: 'app-client-list',
   templateUrl: './client-list.component.html',
@@ -17,17 +21,32 @@ export class ClientListComponent implements OnInit {
   
   /*todos los objetos que vienen por store son observables*/
   count$: Observable<number>;
+  message$: Observable<any>;
 
   constructor(
     private store: Store<{ count: number }>,
     private clientService: ClientService,
+    private storeMessage: Store<AppState>,
     private router: Router
   ) { 
     this.count$ = store.pipe(select('count'));
+    this.message$ = this.storeMessage.select('message')
   }
 
   ngOnInit() {
     this.reloadData();
+  }
+
+  spanishMessage(){
+    this.storeMessage.dispatch({
+      type: 'ESPAÑOL'
+    })
+  }
+
+  frenchMessage(){
+    this.storeMessage.dispatch({
+      type: 'FRANCES'
+    })
   }
 
   /**** STORE ****/
