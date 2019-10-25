@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from "rxjs";
+import { Store, select } from '@ngrx/store';
+import { increment, decrement, reset } from '../counter.actions';
 
-import { ClientDetailsComponent } from '../client-details/client-details.component'
 import { ClientService } from '../client.service';
 import { ClientInterface } from '../interfaces/client';
 
@@ -13,15 +14,35 @@ import { ClientInterface } from '../interfaces/client';
 })
 export class ClientListComponent implements OnInit {
   clients: Observable<ClientInterface[]>;
+  
+  /*todos los objetos que vienen por store son observables*/
+  count$: Observable<number>;
 
   constructor(
+    private store: Store<{ count: number }>,
     private clientService: ClientService,
     private router: Router
-  ) { }
+  ) { 
+    this.count$ = store.pipe(select('count'));
+  }
 
   ngOnInit() {
     this.reloadData();
   }
+
+  /**** STORE ****/
+  increment() {
+    this.store.dispatch(increment());
+  }
+ 
+  decrement() {
+    this.store.dispatch(decrement());
+  }
+ 
+  reset() {
+    this.store.dispatch(reset());
+  }
+  /**** END STORE ****/
 
   reloadData() {
     this.clients = this.clientService.getClients()

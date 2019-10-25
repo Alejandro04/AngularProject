@@ -9,6 +9,9 @@ import { ClientListComponent } from './client-list/client-list.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateClientComponent } from './update-client/update-client.component';
 
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './counter.reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,8 @@ import { UpdateClientComponent } from './update-client/update-client.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({ count: counterReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]
