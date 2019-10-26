@@ -20,6 +20,11 @@
       <button (click)="frenchMessage()">Francés</button>
     </div>
 
+    <div>
+      <p>Filtro:</p>
+      <app-search (search)="handleSearch($event)"></app-search>
+    </div>
+
     <h2>Clients</h2>
     <a [routerLink]="['/clients/add/']">Nuevo</a>
   </div>

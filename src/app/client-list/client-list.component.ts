@@ -37,6 +37,10 @@ export class ClientListComponent implements OnInit {
     this.reloadData();
   }
 
+  handleSearch(value: string){
+    console.log(value)
+  }
+
   spanishMessage(){
     this.storeMessage.dispatch({
       type: 'ESPAÑOL'
