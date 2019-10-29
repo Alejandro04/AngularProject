@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { ClientListComponent } from '../client-list/client-list.component';
 import { ClientService } from '../client.service';
 import { ClientInterface } from '../interfaces/client';
 
@@ -17,7 +16,6 @@ export class ClientDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
     private clientService: ClientService
   ) { }
 
