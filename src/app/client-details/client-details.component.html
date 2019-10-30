@@ -10,6 +10,14 @@
   </div>  
 </div>
 
+<div>
+  <p>Ngrx idiomas</p>
+  {{ message$ | async}}
+
+  <button (click)="spanishMessage()">Español</button>
+  <button (click)="frenchMessage()">Francés</button>
+</div>
+
 <br>
 <br>
-<a [routerLink]="['/clients']">Detalle</a>
+<a [routerLink]="['/clients']">Volver</a>

@@ -10,7 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateClientComponent } from './update-client/update-client.component';
 
 import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './counter.reducer';
 import { simpleReducer } from './simple.reducer';
 import { SearchComponent } from './search/search.component';
 
