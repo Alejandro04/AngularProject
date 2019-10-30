@@ -27,10 +27,11 @@ export class ClientDetailsComponent implements OnInit {
     private router: Router,
     private clientService: ClientService,
     private storeMessage: Store<AppStateInterface>,
-  ) { }
+  ) { 
+    this.message$ = this.storeMessage.select('message')
+  }
 
   ngOnInit() {
-    this.message$ = this.storeMessage.select('message')
 
     this.client = new ClientInterface();
 
